@@ -281,10 +281,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lv: 1
-  speed: 10.5
+  speed: 0.05
   isDead: 0
   cName: "\u8C93\u54AA"
   joystick: {fileID: 273216062}
+  tra: {fileID: 238107117}
 --- !u!114 &273216062 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,

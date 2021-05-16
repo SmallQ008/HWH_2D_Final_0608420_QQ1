@@ -13,12 +13,18 @@ public class player1 : MonoBehaviour
     public string cName = "貓咪";
     [Header("虛擬搖桿")]
     public FixedJoystick joystick;
+    [Header("變形元件")]
+    public Transform tra;
 
 
 
     private void Move()
     {
         print("移動");
+        float h = joystick.Horizontal;
+        float v = joystick.Vertical;
+
+        tra.Translate(h*speed,v*speed, 0);
     }
 
     private void Attack()
