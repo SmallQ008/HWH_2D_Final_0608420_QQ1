@@ -281,11 +281,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lv: 1
-  speed: 0.05
+  speed: 5
   isDead: 0
   cName: "\u8C93\u54AA"
   joystick: {fileID: 273216062}
   tra: {fileID: 238107117}
+  ani: {fileID: 238107115}
 --- !u!114 &273216062 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -409,6 +410,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -424,6 +426,26 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b20ef9fbc6e61449d9b434c7686e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  limitY: {x: -5, y: 5}
+  limitX: {x: -5, y: 5}
+  player: {fileID: 238107117}
+  a: 0
+  b: 100
+  v3a: {x: 0, y: 0, z: 0}
+  v3b: {x: 100, y: 100, z: 100}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

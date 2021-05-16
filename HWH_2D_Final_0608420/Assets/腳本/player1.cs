@@ -15,6 +15,8 @@ public class player1 : MonoBehaviour
     public FixedJoystick joystick;
     [Header("變形元件")]
     public Transform tra;
+    [Header("動畫元件")]
+    public Animator ani;
 
 
 
@@ -24,7 +26,11 @@ public class player1 : MonoBehaviour
         float h = joystick.Horizontal;
         float v = joystick.Vertical;
 
-        tra.Translate(h*speed,v*speed, 0);
+        tra.Translate(h*speed*Time.deltaTime,v*speed*Time.deltaTime, 0);
+        ani.SetFloat("水平", h);
+        ani.SetFloat("垂直", v);
+        
+
     }
 
     private void Attack()
