@@ -30,7 +30,14 @@ public class CamaraControl1 : MonoBehaviour
         Vector3 posCam = transform.position;
         Vector3 posPla = player.position;
 
-        posCam = Vector3.Lerp(posCam, posPla, 0.5f);
+        posCam = Vector3.Lerp(posCam, posPla, 0.5f* speed * Time.deltaTime);
+        posCam.z = -10;
+
+        posCam.x = Mathf.Clamp(posCam.x, limitX.x, limitX.y);
+        posCam.y = Mathf.Clamp(posCam.y, limitY.x, limitY.y);
+
+        transform.position = posCam;
+
         print(posCam);
        
     }

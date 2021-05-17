@@ -287,6 +287,7 @@ MonoBehaviour:
   joystick: {fileID: 273216062}
   tra: {fileID: 238107117}
   ani: {fileID: 238107115}
+  rangeAttack: 3.67
 --- !u!114 &273216062 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -694,8 +695,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838419024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.91, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.68, y: 0.33, z: 0}
+  m_LocalScale: {x: 1.7486908, y: 1.7486908, z: 1.7486908}
   m_Children: []
   m_Father: {fileID: 24049221}
   m_RootOrder: 0
@@ -1038,8 +1039,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446888042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.4, y: 0.5, z: 0}
+  m_LocalScale: {x: 1.8638617, y: 2.309707, z: 1.8638617}
   m_Children: []
   m_Father: {fileID: 24049221}
   m_RootOrder: 1
@@ -1403,7 +1404,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507738122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 238107118}
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1507738122
 MonoBehaviour:
   m_ObjectHideFlags: 0

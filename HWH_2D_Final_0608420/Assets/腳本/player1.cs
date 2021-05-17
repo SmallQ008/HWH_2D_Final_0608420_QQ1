@@ -17,6 +17,15 @@ public class player1 : MonoBehaviour
     public Transform tra;
     [Header("動畫元件")]
     public Animator ani;
+    [Header("偵測範圍")]
+    public float rangeAttack = 2.5f;
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.2f);
+        Gizmos.DrawSphere(transform.position, rangeAttack);
+    }
 
 
 
@@ -33,9 +42,9 @@ public class player1 : MonoBehaviour
 
     }
 
-    private void Attack()
+    public void Attack()
     {
-
+        print("攻擊");
     }
 
     private void Hit()
