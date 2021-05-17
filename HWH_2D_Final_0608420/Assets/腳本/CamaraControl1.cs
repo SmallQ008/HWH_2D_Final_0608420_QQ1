@@ -38,7 +38,7 @@ public class CamaraControl1 : MonoBehaviour
 
         transform.position = posCam;
 
-        print(posCam);
+       
        
     }
 }
