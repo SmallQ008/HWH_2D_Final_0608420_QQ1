@@ -23,6 +23,10 @@ public class player1 : MonoBehaviour
     public AudioSource aud;
     [Header("攻擊音效")]
     public AudioClip soundAttack;
+    [Header("血量")]
+    public float hp = 200;
+    private float hpMax;
+  
 
 
     private void OnDrawGizmos()
@@ -35,7 +39,7 @@ public class player1 : MonoBehaviour
 
     private void Move()
     {
-        print("移動");
+       // print("移動");
         float h = joystick.Horizontal;
         float v = joystick.Vertical;
 
@@ -52,11 +56,14 @@ public class player1 : MonoBehaviour
         print("攻擊");
        RaycastHit2D hit = Physics2D.CircleCast(transform.position, rangeAttack, -transform.up,0 , 1 << 8);
         print("碰到的物件:" + hit.collider.name);
+        aud.PlayOneShot(soundAttack, 0.5f);
+        if (hit && hit.collider.tag == "敵人") hit.collider.GetComponent<Enemy>();
     }
 
-    private void Hit()
+    private void Hit(float damage)
     {
-
+       
+        
     }
 
     private void Dead()
