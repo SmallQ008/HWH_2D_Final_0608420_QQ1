@@ -290,7 +290,7 @@ MonoBehaviour:
   ani: {fileID: 238107115}
   rangeAttack: 5.4
   aud: {fileID: 238107119}
-  soundAttack: {fileID: 8300000, guid: c74563f17ae9a6c4fbf36c8bc436da19, type: 3}
+  soundAttack: {fileID: 8300000, guid: 8cfa09e75e519734a83997a018db7f97, type: 3}
 --- !u!82 &238107119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c74563f17ae9a6c4fbf36c8bc436da19, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8cfa09e75e519734a83997a018db7f97, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.184
   m_Pitch: 1
