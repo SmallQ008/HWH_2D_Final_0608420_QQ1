@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-public class HPmaneger1 : MonoBehaviour
+public class HPmanerger1 : MonoBehaviour
 
 
 {

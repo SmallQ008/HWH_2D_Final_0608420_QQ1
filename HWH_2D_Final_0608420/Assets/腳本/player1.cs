@@ -26,7 +26,11 @@ public class player1 : MonoBehaviour
     [Header("血量")]
     public float hp = 200;
     private float hpMax;
-  
+    [Header("血量系統")]
+    public HPmaneger hpManager;
+    [Header("攻擊力"), Range(0, 1000)]
+    public float attack = 20;
+
 
 
     private void OnDrawGizmos()
@@ -55,15 +59,18 @@ public class player1 : MonoBehaviour
         aud.PlayOneShot(soundAttack, 0.5f);
         print("攻擊");
        RaycastHit2D hit = Physics2D.CircleCast(transform.position, rangeAttack, -transform.up,0 , 1 << 8);
-        print("碰到的物件:" + hit.collider.name);
+       
         aud.PlayOneShot(soundAttack, 0.5f);
-        if (hit && hit.collider.tag == "敵人") hit.collider.GetComponent<Enemy>();
+        if (hit && hit.collider.tag == "Enemy") hit.collider.GetComponent<Enemy1>();
     }
 
     private void Hit(float damage)
     {
-       
-        
+        hp -= damage;
+        hpManager.UpdateHpBar(hp, hpMax);
+        StartCoroutine(hpManager.ShowDamage(damage));
+        if (hp <= 0) Dead();
+
     }
 
     private void Dead()
