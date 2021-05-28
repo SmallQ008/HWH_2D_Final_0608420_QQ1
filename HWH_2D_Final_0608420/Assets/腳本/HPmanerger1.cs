@@ -22,7 +22,7 @@ public class HPmanerger1 : MonoBehaviour
     public IEnumerator ShowDamage(float damage)
     {
         RectTransform rect = Instantiate(rectDamage, transform);
-        rect.anchoredPosition = new Vector2(0, 200);
+        rect.anchoredPosition = new Vector2(0, 800);
         rect.GetComponent<Text>().text = damage.ToString();
 
         float y = rect.anchoredPosition.y;

@@ -9,37 +9,36 @@ public class Enemy1 : MonoBehaviour
     public float rangeAttack = 0.5f;
     [Header("移動速度"), Range(0, 50)]
     public float speed = 2;
-    
+    [Header("攻擊特效")]
+    public ParticleSystem psAttack;
+
     [Header("攻擊冷卻時間"), Range(0, 10)]
     public float cdAttack = 3;
     [Header("攻擊力"), Range(0, 1000)]
-    public float attack = 20;
+    public float attack = 50;
   
     private Transform player;
-    private Player _player;
+    private player1 _player;
     private float timer;
 
     [Header("血量")]
     public float hp = 200;
     private float hpMax;
     [Header("血量系統")]
-    public HPmaneger hpManager;
+    public HPmanerger1 hpManager;
     [Header("角色是否死亡")]
     private bool isDead = false;
 
     private float HpMax;
-    private object psAttack;
+
+    
 
     private void Start()
     {
         hpMax = hp;
         player = GameObject.Find("玩家").transform;
-        _player = player.GetComponent<Player>();
+        _player = player.GetComponent<player1>();
     }
-
-
-
-
 
 
 
@@ -80,9 +79,10 @@ public class Enemy1 : MonoBehaviour
         if (timer >= cdAttack)
         {
             timer = 0;
-            
+            psAttack.Play();
             Collider2D hit = Physics2D.OverlapCircle(transform.position, rangeAttack, 1 << 9);
-            hit.GetComponent<Player>().Hit(attack);
+            if (hit && hit.gameObject.tag == "Player") hit.GetComponent<player1>().Hit(attack);
+
         }
 
 
